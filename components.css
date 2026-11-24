@@ -1,0 +1,179 @@
+.login-card input{
+    width: 100%;
+    box-sizing: border-box;
+    padding: 12px;
+    border: 1px solid #cbd5e1;
+    border-radius: 8px;
+    margin-bottom: 16px;
+}
+.login-card label{
+    display: block;
+    margin-bottom: 6px;
+    font-weight: 600;
+}
+.login-card button{
+    background: #2563eb;
+    color: white;
+    border-radius: 16px;
+    cursor: pointer;
+    padding: 10px 16px;
+    border: none;
+    transition: background-color 0.2s ease;
+}
+.login-card button:hover{
+    background: #1d4ed8;
+}
+.login-card h1{
+    text-align: center;
+    font-size: 24px;
+    color: #0f172a;
+}
+.login-card form button[type="submit"]{
+    width: 100%;
+    margin-top: 8px;
+}
+#registerModal{
+    position: fixed;
+    inset: 0;
+    background-color: rgba(15, 23, 42, 0.6);
+}
+#registerModal:not([hidden]){
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#registerForm{
+    background: white;
+    box-sizing: border-box;
+    width: 90%;
+    max-width: 450px;
+    padding: 32px;
+    border-radius: 16px;
+    max-height: calc(100vh - 32px);
+    overflow-y: auto;
+    box-shadow: 0 20px 60px rgba(15, 23, 42, 0.25);
+}
+#closeRegister{
+    position: absolute;
+    top: 16px;
+    right: 16px;
+    border-radius: 50%;
+    background: white;
+    color: #0f172a;
+    width: 40px;
+    height: 40px;
+    padding: 0;
+}
+#registerForm h2{
+    text-align: center;
+    font-weight: 500;
+}
+.login-card input:focus{
+    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.15);
+    border-color: #2563eb;
+}
+.login-card p{
+    text-align: center;
+    color: #475569;
+    line-height: 1.6;
+}
+.auth-tabs{
+    display: flex;
+    padding: 8px;
+    gap: 8px;
+    background: #eff6ff;
+    border-radius: 12px;
+}
+.auth-tabs button{
+    flex: 1;
+    margin-bottom: 16px;
+}
+#registerTab{
+    background: #dbeafe;
+    color: #1d4ed8;
+}
+#registerTab:hover{
+    background: #bfdbfe;
+}
+.password-field, .passwordAgain-field{
+    display: flex;
+    gap: 8px;
+}
+.password-field input, .passwordAgain-field input{
+    flex: 1;
+    min-width: 0;
+}
+#toggleLoginPassword, #togglePasswordAgain{
+    width: 68px;
+    height: 50px;
+    padding: 0 8px;
+    font-size: 14px;
+    flex-shrink: 0;
+}
+.login-card > h2{
+    text-align: center;
+    font-size: 25px;
+    color: #0f172a;
+}
+.login-card > h1{
+    font-weight: 600;
+    color: #2563eb;
+}
+#registerMessage{
+    font-size: 14px;
+    margin-top: 12px;
+}
+#registerMessage.error{
+    color: #b91c1c;
+}
+#registerMessage.success{
+    color: #15803d;
+}
+.dashboard-tb{
+    background: white;
+    padding: 24px;
+    border-radius: 16px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-top: 24px;
+}
+.dashboard-tb table{
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+.dashboard-tb input{
+    width: 100%;
+    padding: 12px;
+    border-radius: 16px;
+    border: 1px solid #cbd5e1;
+    box-sizing: border-box;
+}
+.dashboard-tb th,
+.dashboard-tb td{
+    padding: 12px;
+    border-bottom: 1px solid #cbd5e1;
+}
+.dashboard-tb button{
+    background: #2563eb;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    padding: 10px 16px;
+    cursor: pointer;
+}
+.dashboard-tb button:hover{
+    background: #1d4ed8;
+}
+.dashboard-tb th{
+    background: #eff6ff;
+    color: #0f172a;
+    text-align: left;
+}
+.dashboard-tb tbody tr:hover{
+    background: #f8fafc;
+}
+.dashboard-tb label{
+    font-weight: 600;
+    display: block;
+    margin-top: 6px;
+}

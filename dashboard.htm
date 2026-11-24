@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="vi">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>
+            Khu vực chính | dự án phân tích năng lực học sinh
+        </title>
+        <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+        <link rel="stylesheet" href="../css/base.css">
+        <link rel="stylesheet" href="../css/components.css">
+        <link rel="stylesheet" href="../css/layout.css">
+    </head>
+    <body>
+        <main class="dashboard-main">
+            <header class="dashboard-header">
+                <h1>Phân tích năng lực học sinh</h1>
+                <p>Theo dõi kết quả và tiến bộ học tập của học sinh</p>
+                <button type="button" id="logoutButton">Đăng xuất</button>
+            </header>
+            <section class="stats-grid">
+                <article class="stat-card">
+                    <h2>Tổng số học sinh</h2>
+                    <p id="studentCount">-</p>
+                </article>
+
+                <article class="stat-card">
+                    <h2>Điểm trung bình</h2>
+                    <p id="averageScore">-</p>
+                </article>
+
+                <article class="stat-card">
+                    <h2>Số điểm đã nhập</h2>
+                    <p id="scoreCount">-</p>
+                </article>
+            </section>
+            <section class="dashboard-tb">
+                <h2>Danh sách học sinh</h2>
+                <form id="addStudentForm">
+                    <label for="name">Nhập tên</label>
+                    <input id="name" type="text" placeholder="Nhập tên để thêm vào bảng" required>
+
+                    <label for="studentClass">Lớp</label>
+                    <input id="studentClass" type="text" placeholder="Nhập lớp để thêm vào bảng" required>
+                    <button type="submit">Thêm</button>
+                </form>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Tên học sinh</th>
+                            <th>Lớp</th>
+                        </tr>
+                    </thead>
+                    <tbody id="studentTableBody"></tbody>
+                </table>
+            </section>
+            <section class="dashboard-tb">
+                <h2>Nhập điểm</h2>
+                <form id="scoreForm">
+                    <label for="student">Học sinh</label>
+                    <select id="student" required>
+                        <option value="">Chọn học sinh</option>
+                    </select>
+                    
+                    <label for="subject">Môn học</label>
+                    <select id="subject" required>
+                        <option value="">Chọn môn học</option>
+                        <option value="Toán">Toán</option>
+                        <option value="Anh">Anh</option>
+                    </select>
+
+                    <label for="score">Điểm</label>
+                    <input id="score" type="number" min="0" max="10" placeholder="Nhập điểm vào đây" required>
+
+                    <button type="submit">Lưu</button>
+                </form>
+                <table>
+                    <thead>
+                    <tr>
+                        <th>Học sinh</th>
+                        <th>Môn học</th>
+                        <th>Điểm</th>
+                    </tr>
+                    </thead>
+                    <tbody id="scoreTableBody"></tbody>
+                </table>
+            </section>
+            <section class="dashboard-tb">
+                <h2>Biểu đồ điểm</h2>
+                <canvas id="scoreChart"></canvas>
+            </section>
+        </main>
+        <script src="../js/students/table.js"></script>
+        <script src="../js/students/form.js"></script>
+        <script src="../js/api.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+        <script src="../js/dashboard.js"></script>
+    </body>
+</html>

@@ -1,0 +1,46 @@
+main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 32px;
+}
+.login-card{
+    width: 90%;
+    max-width: 450px;
+    background: white;
+    padding: 32px;
+    border-radius: 16px;
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.2);
+    box-sizing: border-box;
+}
+.stats-grid{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+.dashboard-main{
+    display: block;
+    min-height: 100vh;
+    padding: 32px;
+}
+.stat-card{
+    background: white;
+    padding: 32px;
+    border-radius: 16px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+.dashboard-header{
+    background: white;
+    padding: 32px;
+    border-radius: 16px;
+    margin-bottom: 24px;
+}
+@media (max-width: 768px){
+    .stats-grid{
+        grid-template-columns: 1fr;
+    }
+    .dashboard-main{
+        padding: 16px;
+    }
+}
